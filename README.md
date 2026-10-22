@@ -53,7 +53,7 @@ Projektet anvender flere centrale principper inden for objektorienteret programm
 - **Arrays af objekter:** Bruges til at opbevare flere spil og spillere.
 - **Metoder:** Funktionaliteten er opdelt i separate metoder, så koden bliver mere overskuelig og genanvendelig.
 - **Linear Search:** Bruges til at finde spil og spillere ved at gennemgå arrayets elementer ét ad gangen.
-- **Bubble Sort:** Bruges til at sortere spillerne efter deres score.
+- **Bubble Sort:** Bruges til at sortere spillerne efter deres score fremfor at bruge metoden "FindTopScoringPlayer".
 
 ## Test og eksempel på anvendelse
 Programmet testes gennem `main()`, hvor der oprettes et `GameSystem`-objekt, fem spillere og otte spil.
@@ -74,7 +74,9 @@ Eksempel på oprettelse af systemet:
 GameSystem gameSystem = new GameSystem(10, 5);
 ```
 
-Dette opretter et system med plads til maksimalt 10 spil og 5 spillere.
+Dette opretter et system med plads til maksimalt 10 spil og 5 spillere. 
+Tilføjer man et nyt spil/spiller, så returneres der et null resultat.
+
 
 ## Begrænsninger
 Systemet er udviklet som en grundlæggende øvelse i Java og objektorienteret programmering.
