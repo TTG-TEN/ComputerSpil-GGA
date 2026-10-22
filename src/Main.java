@@ -1,6 +1,6 @@
 void main() {
 
-GameSystem gameSystem = new GameSystem(10,6);
+GameSystem gameSystem = new GameSystem(10,5);
     Player player1 = new Player(1, "Anders", 22, 150.0);
     Player player2 = new Player(2, "Emma", 20, 230.5);
     Player player3 = new Player(3, "Mikkel", 24, 180.0);
@@ -47,15 +47,17 @@ gameSystem.addGame(game8);
 
     System.out.println("Sofies Score: " + player4.getScore());
 
+    gameSystem.displayLeaderboard();
+
     System.out.println("=============================");
 
     System.out.println("Find spil: " + gameSystem.findGameById(6).getTitle());
     System.out.println(gameSystem.findPlayerById(10));
     player5.displayDetails();
     System.out.println("=============================");
-    System.out.println("Spil 3's gamle genre: " + gameSystem.findGameById(3).getTitle());
+    System.out.println("Spil 3's gamle genre: " + gameSystem.findGameById(3).getGenre());
     game3.setGenre("RPG");
-    System.out.println("Spil 3's nye genre: " + gameSystem.findGameById(3).getTitle());
+    System.out.println("Spil 3's nye genre: " + gameSystem.findGameById(3).getGenre());
+    System.out.println("=============================");
 
-    gameSystem.displayLeaderboard();
 }
